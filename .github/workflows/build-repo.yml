@@ -14,6 +14,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -26,6 +33,7 @@ jobs:
 
       - name: Generate repodata.json
         run: |
+          export DOCKER_CONFIG="$HOME/.docker"
           ./createrepo.sh ns8
           mkdir -p docs/updates
           mv repodata.json docs/updates/repodata.json
@@ -37,4 +45,3 @@ jobs:
           git add docs/updates/repodata.json
           git commit -m "repo: update repodata.json"
           git push
-
