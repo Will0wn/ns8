@@ -1,13 +1,33 @@
-{
-  "api": "v1",
-  "modules": [
-    {
-      "id": "openwebui",
-      "title": "Open WebUI",
-      "description": "Interfaccia web per LLM integrata in NS8",
-      "module_url": "ghcr.io/will0wn/openwebui:latest",
-      "source_url": "https://github.com/Will0wn/ns8-open-webui"
-    }
-  ]
-}
-
+[
+  {
+    "id": "openwebui",
+    "name": "Open WebUI",
+    "upstream_name": "Open WebUI",
+    "description": {
+      "it": "Interfaccia web per LLM integrata in NS8",
+      "en": "Web UI for LLMs integrated in NS8"
+    },
+    "logo": null,
+    "categories": ["ai"],
+    "authors": [
+      { "name": "Alessandro", "email": "alessandro@example.com" }
+    ],
+    "docs": {
+      "documentation_url": "https://docs.openwebui.com/",
+      "bug_url": "https://github.com/open-webui/open-webui/issues",
+      "code_url": "https://github.com/open-webui/open-webui",
+      "relnotes_url": "https://github.com/open-webui/open-webui/releases"
+    },
+    "source": "ghcr.io/will0wn/openwebui",
+    "versions": [
+      {
+        "tag": "1.0.0",
+        "testing": false,
+        "labels": {
+          "org.nethserver.rootfull": "0",
+          "org.nethserver.tcp_ports_demand": "1"
+        }
+      }
+    ]
+  }
+]
