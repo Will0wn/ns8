@@ -43,6 +43,18 @@ jobs:
           mkdir -p docs/updates
           mv repodata.json docs/updates/repodata.json
 
+      - name: Set latest GitHub release tag in repodata
+        run: |
+          VERSION=$(curl -fsSL https://api.github.com/repos/open-webui/open-webui/releases/latest | jq -r .tag_name | sed 's/^v//')
+          jq --arg ver "$VERSION" '
+            map(
+              if .id == "openwebui" then
+                .versions = ([{tag: $ver, testing: false, labels: {}}] + (.versions // []))
+              else . end
+            )
+          ' docs/updates/repodata.json > docs/updates/repodata.tmp
+          mv docs/updates/repodata.tmp docs/updates/repodata.json
+
       - name: Commit repodata.json
         run: |
           git config user.name "github-actions"
