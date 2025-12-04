@@ -22,7 +22,7 @@
     "source": "ghcr.io/open-webui/open-webui",
     "versions": [
       {
-        "tag": "1.0.0",
+        "tag": "0.6.41",
         "testing": false,
         "labels": {
           "org.nethserver.rootfull": "0",
