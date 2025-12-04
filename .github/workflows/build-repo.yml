@@ -18,6 +18,8 @@ jobs:
         run: |
           mkdir -p ns8/openwebui
           curl -fsSL https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/open-webui.png -o ns8/openwebui/logo.png
+          mkdir -p docs/updates/openwebui
+          cp ns8/openwebui/logo.png docs/updates/openwebui/logo.png
 
       - name: Login to GHCR
         uses: docker/login-action@v3
@@ -60,6 +62,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add ns8/openwebui/logo.png || true
+          git add docs/updates/openwebui/logo.png || true
           git add docs/updates/repodata.json
           git commit -m "repo: update repodata.json"
           git push
