@@ -19,7 +19,7 @@
       "code_url": "https://github.com/open-webui/open-webui",
       "relnotes_url": "https://github.com/open-webui/open-webui/releases"
     },
-    "source": "ghcr.io/open-webui/open-webui",
+    "source": "ghcr.io/will0wn/openwebui",
     "versions": [
       {
         "tag": "0.6.41",
