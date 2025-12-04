@@ -5,7 +5,7 @@
     "it": "Interfaccia web per LLM integrata in NS8",
     "en": "Web UI for LLMs integrated in NS8"
   },
-  "categories": ["ai"],
+  "categories": ["collaboration"],
   "authors": [
     {
       "name": "Alessandro S."

@@ -7,9 +7,9 @@
       "it": "Interfaccia web per LLM integrata in NS8",
       "en": "Web UI for LLMs integrated in NS8"
     },
-    "logo": null,
+    "logo": "logo.png",
     "screenshots": [],
-    "categories": ["ai"],
+    "categories": ["collaboration"],
     "authors": [
       { "name": "Will0wn", "email": "alessandro@castinformatica.it" }
     ],
