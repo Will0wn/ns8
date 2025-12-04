@@ -1,0 +1,22 @@
+{
+  "name": "Open WebUI",
+  "upstream_name": "Open WebUI",
+  "description": {
+    "it": "Interfaccia web per LLM integrata in NS8",
+    "en": "Web UI for LLMs integrated in NS8"
+  },
+  "categories": ["ai"],
+  "authors": [
+    {
+      "name": "Alessandro S."
+    }
+  ],
+  "docs": {
+    "documentation_url": "https://docs.openwebui.com/",
+    "bug_url": "https://github.com/open-webui/open-webui/issues",
+    "code_url": "https://github.com/open-webui/open-webui",
+    "relnotes_url": "https://github.com/open-webui/open-webui/releases"
+  },
+  "source": "ghcr.io/will0wn/openwebui"
+}
+
